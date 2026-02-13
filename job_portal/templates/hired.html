@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block content %}
+<div style="text-align: center; margin-bottom: 3rem;">
+    <h1>Success Stories</h1>
+    <p>Hear from the professionals who found their career path through JobPortal.</p>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+    <div style="background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-top: 5px solid #3498db;">
+        <p style="font-style: italic; color: #555;">"I applied for a Junior Developer role and was contacted within 2 days. The process was incredibly smooth and professional!"</p>
+        <div style="margin-top: 1.5rem; display: flex; align-items: center;">
+            <div style="width: 50px; height: 50px; background: #ddd; border-radius: 50%; margin-right: 15px;"></div>
+            <div>
+                <h4 style="margin: 0;">Pavan Kumar</h4>
+                <small style="color: #7f8c8d;">Software Engineer at Google</small>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-top: 5px solid #27ae60;">
+        <p style="font-style: italic; color: #555;">"The AI matching tool actually works. I found a marketing role that fits my skills perfectly. Highly recommended!"</p>
+        <div style="margin-top: 1.5rem; display: flex; align-items: center;">
+            <div style="width: 50px; height: 50px; background: #ddd; border-radius: 50%; margin-right: 15px;"></div>
+            <div>
+                <h4 style="margin: 0;">Sarah Jenkins</h4>
+                <small style="color: #7f8c8d;">Marketing Lead at Tesla</small>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-top: 5px solid #e67e22;">
+        <p style="font-style: italic; color: #555;">"As an employer, finding quality talent used to take months. With this portal, we hired our entire design team in three weeks."</p>
+        <div style="margin-top: 1.5rem; display: flex; align-items: center;">
+            <div style="width: 50px; height: 50px; background: #ddd; border-radius: 50%; margin-right: 15px;"></div>
+            <div>
+                <h4 style="margin: 0;">Mark Verstappen</h4>
+                <small style="color: #7f8c8d;">Hiring Manager at Red Bull Racing</small>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

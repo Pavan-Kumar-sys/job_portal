@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Job Portal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <nav>
+        <div class="logo" style="font-size: 1.5rem; font-weight: bold;">JobPortal</div>
+        <ul>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('jobs') }}">Jobs</a></li>
+            <li><a href="{{ url_for('hired') }}">Hired</a></li>
+            <li><a href="{{ url_for('contact') }}">Contact</a></li>
+            {% if session.get('user_id') %}
+                {% if session.get('role') == 'employer' %}
+                    <li><a href="{{ url_for('post_job') }}" style="color: #f1c40f;">Post Job</a></li>
+                    <li><a href="{{ url_for('view_applicants') }}">Applicants</a></li>
+                {% else %}
+                    <li><a href="{{ url_for('my_applications') }}">My Applications</a></li>
+                {% endif %}
+                <li><a href="{{ url_for('logout') }}">Logout ({{ session['username'] }})</a></li>
+            {% else %}
+                <li><a href="{{ url_for('login') }}">Login</a></li>
+                <li><a href="{{ url_for('register') }}">Register</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+    <div class="container">{% block content %}{% endblock %}</div>
+    <footer style="text-align: center; padding: 2rem; color: #777;">&copy; 2026 Job Portal Project</footer>
+</body>
+</html>

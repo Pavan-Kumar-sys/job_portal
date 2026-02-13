@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="form-container" style="max-width: 500px;">
+    <h2>Get in Touch</h2>
+    <p style="text-align: center; color: #666; margin-bottom: 2rem;">Have questions? Our team is here to help.</p>
+    <form method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="text" name="subject" placeholder="Subject" required>
+        <textarea name="message" rows="5" placeholder="How can we help you?" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</div>
+{% endblock %}

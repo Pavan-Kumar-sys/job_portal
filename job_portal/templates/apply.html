@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="form-container">
+    <h2>Apply with Resume</h2>
+    <form method="POST" enctype="multipart/form-data">
+        <label>Upload your Resume (PDF/DOC):</label>
+        <input type="file" name="resume" required>
+        <button type="submit">Submit Application</button>
+    </form>
+</div>
+{% endblock %}
